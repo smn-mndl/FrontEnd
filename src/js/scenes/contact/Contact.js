@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.scss";
 import DataStore from "aws-amplify";
-import { Complaints } from "../../../models/index";
+import { Todo } from "../../../models/index";
 import Loader from "../../components/loader/Loader";
 import { message } from "antd";
 
@@ -25,7 +25,7 @@ const Contact = () => {
       if (isValidEmail) {
         setIsLoading(true);
         const res = await DataStore.DataStore.save(
-          new Complaints({
+          new Todo({
             Name: stateObj.name,
             Email: stateObj.email,
             Message: stateObj.msg,

@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/contactme",
+      "lambdaFunction": "sumanbioef7141a3",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/contactme"
+    }
+  ],
+  "resourceName": "contactme",
+  "apiName": "contactme",
+  "functionArns": [
+    {
+      "lambdaFunction": "sumanbioef7141a3"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-sumanbio-dev-04403-authRole",
+    "unAuthRoleName": "amplify-sumanbio-dev-04403-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "sumanbioef7141a3",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

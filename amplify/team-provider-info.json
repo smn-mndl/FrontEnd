@@ -10,6 +10,14 @@
       "StackName": "amplify-sumanbio-dev-04403",
       "StackId": "arn:aws:cloudformation:us-east-1:240320253435:stack/amplify-sumanbio-dev-04403/ac92f6e0-e020-11eb-89a9-0e1c3468127d",
       "AmplifyAppId": "d1uokn2gt2al23"
+    },
+    "categories": {
+      "function": {
+        "sumanbioef7141a3": {
+          "deploymentBucketName": "amplify-sumanbio-dev-04403-deployment",
+          "s3Key": "amplify-builds/sumanbioef7141a3-5244567141736952646d-build.zip"
+        }
+      }
     }
   }
 }
