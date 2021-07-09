@@ -1,5 +1,8 @@
 .resume {
   display: flex;
+  h1, h2, h3 {
+    color: antiquewhite;
+  }
   strong {
     font-weight: 500 !important;
   }

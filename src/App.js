@@ -1,4 +1,5 @@
 import "./App.scss";
+import 'antd/dist/antd.css'; 
 import HomePage from "./js/scenes/home/HomePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./js/components/navbar/Navbar";
@@ -7,6 +8,10 @@ import Resume from "./js/scenes/resume/Resume";
 import { useState } from "react";
 import Services from "./js/scenes/services/Services";
 import Contact from "./js/scenes/contact/Contact";
+import Amplify from "aws-amplify";
+
+import awsconfig from "./aws-exports";
+Amplify.configure(awsconfig);
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState("");

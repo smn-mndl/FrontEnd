@@ -27,14 +27,15 @@ const Navbar = ({ setCurrentTab, currentTab }) => {
   const navbarItems = () => {
     return NAVBAR_CONFIG.map((each) => {
       return (
-        <li>
+        <li
+          onClick={() => {
+            setDropdownOpen(false);
+            setCurrentTab(each.url);
+          }}
+        >
           <Link
             className={currentTab === each.url ? "selected-tab" : ""}
             to={each.url}
-            onClick={() => {
-              setDropdownOpen(false);
-              setCurrentTab(each.url);
-            }}
           >
             {each.disp}
           </Link>
