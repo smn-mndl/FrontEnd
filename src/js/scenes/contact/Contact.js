@@ -4,6 +4,7 @@ import DataStore from "aws-amplify";
 import { Todo } from "../../../models/index";
 import Loader from "../../components/loader/Loader";
 import { message } from "antd";
+import emailjs from "emailjs-com";
 
 const success = () => {
   message.success("This is a success message");
@@ -24,17 +25,42 @@ const Contact = () => {
       const isValidEmail = validateEmail(stateObj.email);
       if (isValidEmail) {
         setIsLoading(true);
-        const res = await DataStore.DataStore.save(
-          new Todo({
-            name: `Name- ${stateObj.name}, Email- ${stateObj.email}`,
-            description: stateObj.msg,
-          })
-        );
+        const temlplateID = "template_db0rm87";
+        const res = true;
+        // const res = await DataStore.DataStore.save(
+        //   new Todo({
+        //     name: `Name- ${stateObj.name}, Email- ${stateObj.email}`,
+        //     description: stateObj.msg,
+        //   })
+        // );
+        const templateParams = {
+          name: stateObj.name,
+          notes: stateObj.msg,
+          email: stateObj.email,
+          from_name: stateObj.name,
+          message: stateObj.msg,
+          reply_to: stateObj.email,
+        };
+        emailjs
+          .send(
+            "service_y8lploi",
+            temlplateID,
+            templateParams,
+            "user_W9W3PnPJNlwsJsLGALCDM"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
         setIsLoading(false);
         if (res) {
           setIsError({ err: false, errMsg: "" });
           message.success("Saved Successfully!");
-          setInputData({ name: "", email: "", msg: "" })
+          setInputData({ name: "", email: "", msg: "" });
         } else {
           message.error(
             "Something broke! Couldn't be saved! Please try again."
