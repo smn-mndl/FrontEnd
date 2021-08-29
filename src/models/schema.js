@@ -10,22 +10,15 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "Name": {
-                    "name": "Name",
+                "name": {
+                    "name": "name",
                     "isArray": false,
                     "type": "String",
                     "isRequired": true,
                     "attributes": []
                 },
-                "Email": {
-                    "name": "Email",
-                    "isArray": false,
-                    "type": "AWSEmail",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "Message": {
-                    "name": "Message",
+                "description": {
+                    "name": "description",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -54,27 +47,11 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "allow": "public",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            }
-                        ]
-                    }
                 }
             ]
         }
     },
     "enums": {},
     "nonModels": {},
-    "version": "346abe997953aac299d9dadf5d82a6e8"
+    "version": "4401034582a70c60713e1f7f9da3b752"
 };

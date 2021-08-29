@@ -26,9 +26,8 @@ const Contact = () => {
         setIsLoading(true);
         const res = await DataStore.DataStore.save(
           new Todo({
-            Name: stateObj.name,
-            Email: stateObj.email,
-            Message: stateObj.msg,
+            name: `Name- ${stateObj.name}, Email- ${stateObj.email}`,
+            description: stateObj.msg,
           })
         );
         setIsLoading(false);

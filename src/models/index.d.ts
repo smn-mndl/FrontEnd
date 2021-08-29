@@ -6,9 +6,8 @@ import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplif
 
 export declare class Todo {
   readonly id: string;
-  readonly Name: string;
-  readonly Email?: string;
-  readonly Message?: string;
+  readonly name: string;
+  readonly description?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<Todo>);
