@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sumanbio-staging-62905-authRole",
+      "UnauthRoleArn": "arn:aws:iam::850779683257:role/amplify-sumanbio-staging-62905-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::850779683257:role/amplify-sumanbio-staging-62905-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-sumanbio-staging-62905-deployment",
+      "UnauthRoleName": "amplify-sumanbio-staging-62905-unauthRole",
+      "StackName": "amplify-sumanbio-staging-62905",
+      "StackId": "arn:aws:cloudformation:us-east-1:850779683257:stack/amplify-sumanbio-staging-62905/6916ebc0-0892-11ec-b603-0adc781992e7",
+      "AmplifyAppId": "dw8t3dcnsjsk2"
+    }
+  }
+}
