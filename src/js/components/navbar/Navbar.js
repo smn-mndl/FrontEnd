@@ -48,7 +48,7 @@ const Navbar = ({ setCurrentTab, currentTab }) => {
   };
   return (
     <nav className="navbar">
-      {windowWidth > 499 ? (
+      {true ? (
         <ul>{navbarItems()}</ul>
       ) : (
         <div onClick={() => setDropdownOpen(!dropdownOpen)}>

@@ -1,23 +1,40 @@
 import "./App.scss";
-import 'antd/dist/antd.css'; 
+import "antd/dist/antd.css";
 import HomePage from "./js/scenes/home/HomePage";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Navbar from "./js/components/navbar/Navbar";
 import AboutMe from "./js/scenes/aboutme/AboutMe";
 import Resume from "./js/scenes/resume/Resume";
 import { useState } from "react";
 import Services from "./js/scenes/services/Services";
 import Contact from "./js/scenes/contact/Contact";
-import Amplify from "aws-amplify";
-
-import awsconfig from "./aws-exports";
-Amplify.configure(awsconfig);
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState("");
+
+  const url = window.location.href;
+  const route = url.split("/")[3];
+  console.log("params", route);
+  function download(filename, textInput) {
+    debugger;
+    let link = document.createElement("a");
+    link.download = "SUMANMONDAL_CV.docx";
+    link.href = "static/media/SUMANMONDAL_CV.72a353ee.docx";
+    link.click();
+  }
   return (
     <Router>
       <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
+      {route === "resume" && (
+        <>
+          {/* <div className="download-btn">
+          <span onClick={() => download("abc", "abce")}>Download CV</span>
+        </div> */}
+          <a className="download-btn" href={"/SUMANMONDAL_CV.docx"} download>
+            <span>Download CV</span>
+          </a>
+        </>
+      )}
       <main className="app-content">
         <Switch>
           <Route path="/about">
@@ -26,7 +43,7 @@ const App = () => {
           <Route path="/resume">
             <Resume />
           </Route>
-          <Route path="/expertises">
+          <Route path="/expertise">
             <Services />
           </Route>
           <Route path="/contact">

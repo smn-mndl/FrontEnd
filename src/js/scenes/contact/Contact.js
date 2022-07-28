@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./Contact.scss";
-import DataStore from "aws-amplify";
-import { Todo } from "../../../models/index";
 import Loader from "../../components/loader/Loader";
 import { message } from "antd";
 import emailjs from "emailjs-com";

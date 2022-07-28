@@ -12,8 +12,8 @@ export const NAVBAR_CONFIG = [
     url: "/resume",
   },
   {
-    disp: "Expertises",
-    url: "/expertises",
+    disp: "Expertise",
+    url: "/expertise",
   },
   // {
   //   disp: "Portfolio",

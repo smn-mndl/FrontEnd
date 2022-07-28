@@ -97,3 +97,19 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+.download-btn {
+  justify-content: right;
+  display: flex;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  span{
+  border: 1px solid;
+  padding: 5px 7px;
+  border-radius: 4px;
+  background: antiquewhite;
+  color: #161212;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
