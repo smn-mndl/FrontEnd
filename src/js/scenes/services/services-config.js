@@ -5,6 +5,7 @@ import {
   AntCloudOutlined,
   LineChartOutlined
 } from "@ant-design/icons";
+import React from "react";
 
 export const SERVICES_CONFIG = [
   {
