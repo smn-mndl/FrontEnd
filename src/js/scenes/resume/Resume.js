@@ -128,7 +128,7 @@ const Resume = () => {
           </i>
           <br></br>
           <div>
-            Creating responsive webpages using Angular 5 and TypeScript.
+            Creating responsive webpages using Angular 5 and TypeScript
           </div>
         </p>
       </div>
