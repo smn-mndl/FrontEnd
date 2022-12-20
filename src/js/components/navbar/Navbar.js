@@ -6,16 +6,16 @@ import "./Navbar.scss";
 
 const Navbar = ({ setCurrentTab, currentTab }) => {
   const windowWidth = window.innerWidth;
-  const [toggleMenu, setToggleMenu] = useState(false);
+  // const [toggleMenu, setToggleMenu] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   useEffect(() => {
     window.addEventListener("resize", () => {
       // if()
       setDropdownOpen(false);
       if (window.innerWidth > 499) {
-        setToggleMenu(false);
+        // setToggleMenu(false);
       } else if (window.innerWidth < 499) {
-        setToggleMenu(true);
+        // setToggleMenu(true);
       }
     });
 

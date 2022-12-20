@@ -4,14 +4,15 @@ import Loader from "../../components/loader/Loader";
 import { message } from "antd";
 import emailjs from "emailjs-com";
 
-const success = () => {
-  message.success("This is a success message");
-};
+// const success = () => {
+//   message.success("This is a success message");
+// };
 
 const Contact = () => {
   const [inputData, setInputData] = useState({ name: "", email: "", msg: "" });
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState({ err: false, errMsg: "" });
+  console.log(isError)
   const onClickHandler = async () => {
     const stateObj = JSON.parse(JSON.stringify(inputData));
     if (Object.values(stateObj).filter((each) => each).length === 3) {

@@ -1,7 +1,7 @@
 import "./App.scss";
 import "antd/dist/antd.css";
 import HomePage from "./js/scenes/home/HomePage";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./js/components/navbar/Navbar";
 import AboutMe from "./js/scenes/aboutme/AboutMe";
 import Resume from "./js/scenes/resume/Resume";
@@ -15,13 +15,13 @@ const App = () => {
   const url = window.location.href;
   const route = url.split("/")[3];
   console.log("params", route);
-  function download(filename, textInput) {
-    debugger;
-    let link = document.createElement("a");
-    link.download = "SUMANMONDAL_CV.docx";
-    link.href = "static/media/SUMANMONDAL_CV.72a353ee.docx";
-    link.click();
-  }
+  // function download(filename, textInput) {
+  //   debugger;
+  //   let link = document.createElement("a");
+  //   link.download = "SUMANMONDAL_CV.docx";
+  //   link.href = "static/media/SUMANMONDAL_CV.72a353ee.docx";
+  //   link.click();
+  // }
   return (
     <Router>
       <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
