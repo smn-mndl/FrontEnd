@@ -12,15 +12,22 @@ const Resume = () => {
         <p>
           <i>
             <strong>
+              <div>Indian Institue of Technology, Jodhpur, India</div>
+            </strong>
+            <div>Aug, 2022 - Present</div>
+          </i>
+          <br></br>
+          <div>Master's in Technology in Computational Data Science.</div>
+          <hr></hr>
+          <i>
+            <strong>
               <div>Haldia Institute of Technology, West Bengal, India</div>
             </strong>
             <div>Aug, 2013 - July, 2017</div>
           </i>
 
           <br></br>
-          <div>
-            Completed Bachelor's in Technology in Mechanical Engineering.
-          </div>
+          <div>Bachelor's in Technology in Mechanical Engineering.</div>
         </p>
         <hr></hr>
         <p>
@@ -38,24 +45,6 @@ const Resume = () => {
           <div>
             Higher Secondary education from board of West Bengal Council of
             Higher Secondary Education.
-          </div>
-        </p>
-        <hr></hr>
-        <p>
-          <h3>School</h3>
-        </p>
-        <p>
-          <i>
-            <strong>
-              <div>Jadavpur Vidyapith, West Bengal, India</div>
-            </strong>
-            <div>May, 2005 - May, 2011</div>
-          </i>
-
-          <br></br>
-          <div>
-            Secondary education from board of West Bengal Board of Secondary
-            Education.
           </div>
         </p>
       </div>
@@ -128,7 +117,7 @@ const Resume = () => {
           </i>
           <br></br>
           <div>
-            Creating responsive webpages using Angular 5 and TypeScript
+            Creating responsive webpages using Angular 5 and TypeScript.
           </div>
         </p>
       </div>

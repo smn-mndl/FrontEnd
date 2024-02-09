@@ -6,16 +6,16 @@ import "./Navbar.scss";
 
 const Navbar = ({ setCurrentTab, currentTab }) => {
   const windowWidth = window.innerWidth;
-  // const [toggleMenu, setToggleMenu] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(true);
   useEffect(() => {
     window.addEventListener("resize", () => {
       // if()
       setDropdownOpen(false);
       if (window.innerWidth > 499) {
-        // setToggleMenu(false);
+        setToggleMenu(false);
       } else if (window.innerWidth < 499) {
-        // setToggleMenu(true);
+        setToggleMenu(true);
       }
     });
 
@@ -29,10 +29,11 @@ const Navbar = ({ setCurrentTab, currentTab }) => {
       return (
         <li
           onClick={() => {
-            setDropdownOpen(false);
+            // setDropdownOpen(false);
             setCurrentTab(each.url);
           }}
         >
+          <div>{each.icon}</div>
           <Link
             className={currentTab === each.url ? "selected-tab" : ""}
             to={each.url}
@@ -44,18 +45,34 @@ const Navbar = ({ setCurrentTab, currentTab }) => {
     });
   };
   const createSideNav = () => {
-    return <div className="side-nav">{navbarItems()}</div>;
+    return (
+      <div
+        className={
+          dropdownOpen && window.innerWidth > 699 ? "showToggleMenu side-nav" : "hideToggleMenu side-nav"
+        }
+      >
+        {navbarItems()}
+      </div>
+    );
   };
   return (
     <nav className="navbar">
-      {true ? (
+      {toggleMenu ? (
         <ul>{navbarItems()}</ul>
       ) : (
-        <div onClick={() => setDropdownOpen(!dropdownOpen)}>
-          {!dropdownOpen ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
+        <div className="navbar-header">
+          <div className="navbar-name">
+            <span>Suman Mondal</span>
+          </div>
+          <div
+            className="navbar-icon"
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+          >
+            {dropdownOpen ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
+          </div>
         </div>
       )}
-      {dropdownOpen && createSideNav()}
+      {createSideNav()}
     </nav>
   );
 };

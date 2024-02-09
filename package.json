@@ -15,6 +15,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "@ant-design/icons": "^4.7.0",
     "start": "react-scripts start",
     "build": "set \"CI=false\" && react-scripts build",
     "test": "react-scripts test",

@@ -14,14 +14,7 @@ const App = () => {
 
   const url = window.location.href;
   const route = url.split("/")[3];
-  console.log("params", route);
-  // function download(filename, textInput) {
-  //   debugger;
-  //   let link = document.createElement("a");
-  //   link.download = "SUMANMONDAL_CV.docx";
-  //   link.href = "static/media/SUMANMONDAL_CV.72a353ee.docx";
-  //   link.click();
-  // }
+
   return (
     <Router>
       <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
@@ -35,7 +28,7 @@ const App = () => {
           </a>
         </>
       )}
-      <main className="app-content">
+      <main className={`app-content app-content-${route}`}>
         <Switch>
           <Route path="/about">
             <AboutMe />
