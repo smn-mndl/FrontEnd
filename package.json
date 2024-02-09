@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "antd": "^4.16.13",
     "axios": "^0.22.0",
     "emailjs-com": "^3.2.0",
@@ -15,9 +16,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "@ant-design/icons": "^4.7.0",
     "start": "react-scripts start",
-    "build": "set \"CI=false\" && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sitemap": "babel-node src/sitemap-generator.js"
